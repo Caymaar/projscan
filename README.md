@@ -1,5 +1,9 @@
 # projscan
 
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+![Version](https://img.shields.io/badge/version-0.1.1-green.svg)
+[![Downloads](https://pepy.tech/badge/projscan)](https://pepy.tech/project/projscan)
+
 Scanner for local git repositories and `uv` tools installed from git.  
 Answers one simple question: **am I up to date?**
 

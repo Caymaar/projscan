@@ -7,7 +7,7 @@ name = "projscan"
 version = "0.1.0"
 description = "Scanner de dépôts git locaux et de tools uv installés."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.9"
 dependencies = [
     "rich>=13",
     "click>=8",
