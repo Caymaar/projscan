@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "projscan"
+version = "0.1.0"
+description = "Scanner de dépôts git locaux et de tools uv installés."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "rich>=13",
+    "click>=8",
+]
+
+[project.scripts]
+projscan = "projscan.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/projscan"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
