@@ -86,7 +86,7 @@ def _read_dist_info_version(tool_path: Path) -> str | None:
 
     Fallback universel : couvre les tools PyPI où le receipt ne stocke pas la version.
     """
-    for dist_info in tool_path.rglob("*.dist-info"):
+    for dist_info in tool_path.rglob(f"{tool_path.name.replace('-', '_')}-*.dist-info"):
         metadata = dist_info / "METADATA"
         if not metadata.is_file():
             continue
@@ -102,7 +102,7 @@ def _read_dist_info_version(tool_path: Path) -> str | None:
 def _find_direct_url_json(tool_path: Path) -> dict | None:
     """Cherche un direct_url.json dans le venv du tool (layout uv variable)."""
     # uv place le venv soit directement dans tool_path, soit dans un sous-dossier.
-    for dist_info in tool_path.rglob("*.dist-info"):
+    for dist_info in tool_path.rglob(f"{tool_path.name.replace('-', '_')}-*.dist-info"):
         du = dist_info / "direct_url.json"
         if du.is_file():
             try:
