@@ -2,7 +2,7 @@
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 ![Version](https://img.shields.io/pypi/v/projscan)
-[![Downloads](https://pepy.tech/badge/projscan)](https://pepy.tech/project/projscan)
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/projscan?period=total&units=INTERNATIONAL_SYSTEM&left_color=GREY&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/projscan)
 
 Scanner for local git repositories and `uv` tools installed from git.  
 Answers one simple question: **am I up to date?**
