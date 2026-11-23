@@ -17,7 +17,10 @@ Pour chaque repo trouvé on remonte :
 from __future__ import annotations
 
 import asyncio
-import tomllib
+try:
+    import tomllib
+except ModuleNotFoundError:
+    import tomli as tomllib
 from dataclasses import dataclass, asdict
 from pathlib import Path
 
